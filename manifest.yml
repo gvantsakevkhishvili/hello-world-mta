@@ -12,19 +12,11 @@ applications:
       JBP_CONFIG_SAP_MACHINE_JDK : "{ version: 21.+ }"
     services:
     - javauaa
+    - my-destination-service
 
   - name: web
     random-route: true
     path: web
     memory: 1024M
-    env:
-      destinations: >
-        [
-          {
-            "name":"helloworld",
-            "url":"https://helloworld-impressive-platypus-xh.cfapps.us10-001.hana.ondemand.com",
-            "forwardAuthToken": true
-          }
-        ]
     services:
       - javauaa

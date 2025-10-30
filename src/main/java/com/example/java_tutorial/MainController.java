@@ -14,7 +14,6 @@ import com.sap.cloud.security.xsuaa.token.Token;
 
 @RestController
 @RequestMapping(path = "")
-
 public class MainController {
     private static final Logger logger = LoggerFactory.getLogger(MainController.class);
 
